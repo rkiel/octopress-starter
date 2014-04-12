@@ -21,7 +21,8 @@ start with a fresh copy of Octopress
 
 copy the Vagrant files
 
-    cp ~/GitHub/rkiel/octopress-starter/Vagrantfile
+    cd ~/GitHub/yournamehere/mynewblog
+    cp ~/GitHub/rkiel/octopress-starter/Vagrantfile .
     cp -r ~/GitHub/rkiel/octopress-starter/provision provision
 
 make it your own repository
