@@ -17,17 +17,25 @@ clone the octopress-starter repository
 start with a fresh copy of Octopress
 
     cd ~/GitHub/yournamehere
+
     cp -r ~/GitHub/imathis/octopress mynewblog
 
 copy the Vagrant files
 
     cd ~/GitHub/yournamehere/mynewblog
+
     cp ~/GitHub/rkiel/octopress-starter/Vagrantfile .
     cp -r ~/GitHub/rkiel/octopress-starter/provision provision
+    echo '.vagrant' >> .gitignore
+
+remove the public from .gitignore
+
+    sed
 
 make it your own repository
 
     cd ~/GitHub/yournamehere/mynewblog
+
     rm -rf .git
     git init
     git add .
@@ -45,4 +53,27 @@ add the Heroku toolbelt to your path
 
     echo 'PATH="/usr/local/heroku/bin:$PATH"' >> ~/.profile
     . .profile
+
+install the necessary gems
+
+    cd /vagrant
+    bundle install
+    rake install
+
+
+generate the blog
+
+    cd /vagrant
+
+    rake generate
+
+start the blog preview server
+
+    cd /vagrant
+
+    rake preview
+
+hit the blog
+
+    http://192.168.33.10:4000
 
