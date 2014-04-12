@@ -43,3 +43,5 @@ login to your machine
 add the Heroku toolbelt to your path
 
     echo 'PATH="/usr/local/heroku/bin:$PATH"' >> ~/.profile
+    . .profile
+
