@@ -1,24 +1,28 @@
-### Get ready to clone some repositories
+Get ready to clone some repositories
 
     mkdir -p ~/GitHub/imathis
     mkdir -p ~/GitHub/rkiel
+    mkdir -p ~/GitHub/yournamehere
 
-### 1A - clone the Octopress repository
+clone the Octopress repository
 
     cd ~/GitHub/imathis
     git clone git://github.com/imathis/octopress.git octopress
 
-### 1B - update the Octopress repository
-
-    cd ~/GitHub/imathis/octopress
-    git pull
-
-### 2A - clone the octopress-starter repository
+clone the octopress-starter repository
 
     cd ~/GitHub/rkiel
     git clone git://github.com/rkiel/octopress-starter.git
 
-### 2B - update the octopress-starter repository
+start with a fresh copy of Octopress
 
-    cd ~/GitHub/rkiel/octopress-starter
-    git pull
+    cd ~/GitHub/yournamehere
+    cp -r ~/GitHub/imathis/octopress mynewblog
+
+make it your own repository
+
+    cd ~/GitHub/yournamehere/mynewblog
+    rm -rf .git
+    git init
+    git add .
+    git commit -m "Initial commit"
