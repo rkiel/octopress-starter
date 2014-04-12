@@ -19,6 +19,11 @@ start with a fresh copy of Octopress
     cd ~/GitHub/yournamehere
     cp -r ~/GitHub/imathis/octopress mynewblog
 
+copy the Vagrant files
+
+    cp ~/GitHub/rkiel/octopress-starter/Vagrantfile
+    cp -r ~/GitHub/rkiel/octopress-starter/provision provision
+
 make it your own repository
 
     cd ~/GitHub/yournamehere/mynewblog
@@ -26,3 +31,15 @@ make it your own repository
     git init
     git add .
     git commit -m "Initial commit"
+
+boot your machine
+
+    vagrant up
+
+login to your machine
+
+    vagrant ssh
+
+add the Heroku toolbelt to your path
+
+    echo 'PATH="/usr/local/heroku/bin:$PATH"' >> ~/.profile
