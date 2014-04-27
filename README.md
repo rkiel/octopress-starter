@@ -2,27 +2,37 @@ Get ready to clone some repositories
 
     mkdir -p ~/GitHub/imathis
     mkdir -p ~/GitHub/rkiel
-    mkdir -p ~/GitHub/yournamehere
+    mkdir -p ~/GitHub/YOUR-GITHUB-NAME
 
-clone the Octopress repository
+clone the Octopress repository [first time only]
 
     cd ~/GitHub/imathis
     git clone git://github.com/imathis/octopress.git octopress
 
-clone the octopress-starter repository
+update the Octopress repository
+
+    cd ~/GitHub/imathis/octopress
+    git pull
+
+clone the octopress-starter repository [first time only]
 
     cd ~/GitHub/rkiel
     git clone git://github.com/rkiel/octopress-starter.git
 
+update the octopress-starter repository
+
+    cd ~/GitHub/rkiel/octopress-starter
+    git pull
+
 start with a fresh copy of Octopress
 
-    cd ~/GitHub/yournamehere
+    cd ~/GitHub/YOUR-GITHUB-NAME
 
-    cp -r ~/GitHub/imathis/octopress mynewblog
+    cp -r ~/GitHub/imathis/octopress YOUR-BLOG-NAME
 
 copy the Vagrant files
 
-    cd ~/GitHub/yournamehere/mynewblog
+    cd ~/GitHub/YOUR-GITHUB-NAME/YOUR-BLOG-NAME
 
     cp ~/GitHub/rkiel/octopress-starter/Vagrantfile .
     cp -r ~/GitHub/rkiel/octopress-starter/provision provision
@@ -34,7 +44,7 @@ remove the public from .gitignore
 
 make it your own repository
 
-    cd ~/GitHub/yournamehere/mynewblog
+    cd ~/GitHub/YOUR-GITHUB-NAME/YOUR-BLOG-NAME
 
     rm -rf .git
     git init
@@ -49,27 +59,21 @@ login to your machine
 
     vagrant ssh
 
-add the Heroku toolbelt to your path
-
-    echo 'PATH="/usr/local/heroku/bin:$PATH"' >> ~/.profile
-    . .profile
+    cd /vagrant
 
 install the necessary gems
 
-    cd /vagrant
     bundle install
+
+install Octopress
+
     rake install
 
-
-generate the blog
-
-    cd /vagrant
+generate your blog
 
     rake generate
 
 start the blog preview server
-
-    cd /vagrant
 
     rake preview
 
@@ -92,7 +96,7 @@ add your SSH credentials to Heroku
 
 create a new app on Heroku
 
-    heroku apps:create sample-cc-blog
+    heroku apps:create YOUR-BLOG-NAME
 
 deploy your blog to Heroku
 
